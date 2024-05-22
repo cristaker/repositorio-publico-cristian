@@ -2,26 +2,26 @@
 
 para la correcta utilizacion del microservicio se debe una vez clonado, ejecutar en la raiz del proyecto el comando
 
-instalar mysql en un contenedor con los siguientes comandos
+## instalar mysql en un contenedor con los siguientes comandos
 
-descargar la imagen
+### descargar la imagen
 
 docker pull mysql:latest
 
-generar el contenedor de mysql 
+### generar el contenedor de mysql 
 
 docker run -d --name mysql -e MYSQL_ROOT_PASSWORD=1234 -e MYSQL_DATABASE=mokDB -p 3306:3306 mysql
 
-en el archivo host de cada maquina con la ip4 de la maquina registrar estos 2 campos
+### en el archivo host de cada maquina con la ip4 de la maquina registrar estos 2 campos
 
 ipmaquina mysql
 ipmaquina kafka-service
 
-construir el compose
+### construir el compose
 
 docker-compose up --build
 
-Luego de tener los contenedores en ejecucion, unicamente bastara con ejecutar los endpoint en postman para validar su correcto funcionamiento.
+### Luego de tener los contenedores en ejecucion, unicamente bastara con ejecutar los endpoint en postman para validar su correcto funcionamiento.
 
 ### Body de los json para el correcto funcionamiento de los endpoints del crud
 
@@ -66,5 +66,5 @@ Endpoint categories
 "name":"comedia romantica"
 }
 
-url para la paginacion desde el navegador
+### url para la paginacion desde el navegador
 http://localhost:8001/get-paginated-pokemon-data?page=0&size=20
